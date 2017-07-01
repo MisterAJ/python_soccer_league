@@ -40,7 +40,7 @@ if __name__ == "__main__":
             file.write(team[1] + "\n")
             for player in team[0]:
                 # Create welcome letter
-                player_letter = open("letters/" + '_'.join(player["Name"].split()) + ".txt", "w")
+                player_letter = open("letters/" + '_'.join(player["Name"].split()).lower() + ".txt", "w")
                 player_letter.write(
                     'Dear ' + player["Guardian Name(s)"] + ",\n\n" +
                     "We would like to welcome " + player["Name"] +
